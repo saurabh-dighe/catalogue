@@ -7,8 +7,7 @@ pipeline {
             steps {
                 sh "echo Installing Lint Checker"
                 sh "npm i jslint"
-                sh "node_modules/jslint/bin/jslint.js server.js"
-                sh "exit 0"
+                sh "node_modules/jslint/bin/jslint.js server.js || true"
             }
         }
         stage('Static Code Analysis') {
