@@ -2,4 +2,4 @@
 
 env.COMPONENT="catalogue"
 
-catalogue()
+nodejs(COMPONENT)
