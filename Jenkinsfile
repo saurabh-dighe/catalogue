@@ -1,5 +1,5 @@
 @Library('shared-library') 
 
-env.COMPONENT="catalogue"
+env@COMPONENT="catalogue"
 
 nodejs(COMPONENT)
