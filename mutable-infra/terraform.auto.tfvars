@@ -1,2 +1,2 @@
-INTERNAL            = false
+INTERNAL            = true
 COMPONENT           = "catalogue"
