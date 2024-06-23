@@ -3,7 +3,7 @@
 env.COMPONENT="catalogue"
 
 env.APPTYPE="nodejs"
-env.NEXUS_URL= "172.31.39.180"
+env.NEXUS_URL= "172.31.46.219"
 
 nodejs()
 
