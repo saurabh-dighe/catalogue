@@ -24,7 +24,8 @@ spec:
         ports:
         - containerPort: 8080
       envFrom: 
-        configMapRef: catalogue-cm
+        - configMapRef: 
+            name: catalogue-cm
       resources:
         requests:
           memory: "128Mi"
