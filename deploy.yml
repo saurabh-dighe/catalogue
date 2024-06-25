@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalogue
+  labels:
+    app: catalogue
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: catalogue
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+     maxUnavailable: 2
+  template:
+    metadata:
+      labels:
+        app: catalogue
+    spec:
+      containers:
+      - name: catalogue
+        image: httpd
+        ports:
+        - containerPort: 80
+
+---
+#ClusterIp service
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpd-svc
+spec:
+  selector:
+    app: httpd
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
