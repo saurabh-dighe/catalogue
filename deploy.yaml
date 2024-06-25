@@ -23,7 +23,8 @@ spec:
         image: 992382386864.dkr.ecr.us-east-1.amazonaws.com/catalogue:300
         ports:
         - containerPort: 8080
-      envFrom: catalogue-cm
+      envFrom: 
+        configMapRef: catalogue-cm
       resources:
         requests:
           memory: "128Mi"
