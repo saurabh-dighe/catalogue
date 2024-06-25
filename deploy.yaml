@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalogue
+  name: catalogue-deploy
   labels:
     app: catalogue
 spec:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: catalogue
-        image: httpd
+        image: 992382386864.dkr.ecr.us-east-1.amazonaws.com/catalogue:300
         ports:
         - containerPort: 80
 
@@ -29,11 +29,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: httpd-svc
+  name: catalogue-svc
 spec:
   selector:
-    app: httpd
+    app: catalogue
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
