@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: catalogue
-        image: 992382386864.dkr.ecr.us-east-1.amazonaws.com/catalogue:301
+        image: 992382386864.dkr.ecr.us-east-1.amazonaws.com/catalogue:302
         ports:
         - containerPort: 8080
         #livenessProbe
